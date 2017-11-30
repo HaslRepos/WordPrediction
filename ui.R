@@ -28,8 +28,12 @@ shinyUI(fluidPage(
                     Additional information (frequency of the predicted word) can be provided."),
       
                br(),
-
-               tabsetPanel(type = "tabs", tabPanel("Prediction",  tableOutput("prediction")))
+               tags$head(
+               tags$style(type='text/css', ".nav-tabs {font-size: 20px"),
+               tags$style(type='text/css', ".tab-content {font-size: 20px")
+               ),
+               tabsetPanel(type = "tabs", tabPanel("Prediction",  tableOutput("prediction"))
+               )
           )
      )
 ))
